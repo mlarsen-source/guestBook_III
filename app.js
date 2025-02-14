@@ -1,8 +1,8 @@
 /*
 
 Author: Matthew Larsen
-Date: 02/05/2025
-Portfolio Project: Guestbook Part II
+Date: 02/13/2025
+Portfolio Project: Guestbook Part III
 Filename: app.js
 File Description: JavaScript for Guestbook app
 
@@ -43,7 +43,7 @@ app.post('/confirm', (req, res) =>
   // if field validation passses create contact object, add contact object to contactList array and send confirmation page
   else
   {
-    // Get form data from request body
+    // create contact object with form data from request body and add a timestamp
     const contact = 
     {
       lname: req.body.lname,
