@@ -1,0 +1,52 @@
+/*
+
+Author: Matthew Larsen
+Date: 02/05/2025
+Portfolio Project: Guestbook Part II
+Filename: confirm.css
+File Description: CSS for Confirmation page
+
+*/
+
+body
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color:#f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  font-weight: bold;
+}
+
+main
+{
+  background-color: #ffffff;
+  height:10rem;
+  width: 25rem;
+  box-shadow: 1px 1px 2px 2px #d3d3d3;
+  border-radius: .2rem;
+  padding: 1rem;
+  margin: 2rem;
+}
+
+h2
+{
+  margin-bottom: 2rem;
+}
+
+p
+{
+  margin-bottom: 2rem;
+}
+
+#button
+{
+  color: white;
+  background-color: green;
+  height: 1.8rem;
+  width: 4rem;
+  border-radius: .2rem;
+  border: none;
+  box-shadow: 1px 1px 2px #1e1e1e
+}
