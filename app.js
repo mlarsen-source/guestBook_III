@@ -23,10 +23,13 @@ app.use(express.static('public'));
 // handling form submission for data sent in the URL-encoded format
 app.use(express.urlencoded({extended: true}));
 
+//Set the view engine
+app.set('view engine', 'ejs');
+
 // default route for contact form home page
 app.get('/',(req, res)=>{
 
-  res.sendFile(`${import.meta.dirname}/views/home.html`);
+  res.render('home');
 });
 
 
@@ -43,6 +46,7 @@ app.post('/confirm', (req, res) =>
   // if field validation passses create contact object, add contact object to contactList array and send confirmation page
   else
   {
+    
     // create contact object with form data from request body and add a timestamp
     const contact = 
     {
@@ -67,7 +71,7 @@ app.post('/confirm', (req, res) =>
     console.log(req.body);
   
     // send confirmation page to user
-    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+    res.render('confirm', { contact });
   }
 });
 
