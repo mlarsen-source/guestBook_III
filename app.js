@@ -33,29 +33,42 @@ app.get('/',(req, res)=>{
 // post route to handle contact form submission
 app.post('/confirm', (req, res) =>
 {
-  // Get form data from request body
-  const contact = 
-  {
-    lname: req.body.lname,
-    fname: req.body.fname,
-    title: req.body.title,
-    company: req.body.company,
-    linkedIn: req.body.linkedIn,
-    meet: req.body.meet,
-    other: req.body.other,
-    message: req.body.message,
-    mailList: req.body.mailList,
-    format: req.body.format,
-    timestamp: new Date()
-  };
-  // Save contact info to the contactList array
-  contactList.push(contact)
   
-  // Log the contactList array to the console
-  console.log(req.body);
- 
-  // send confirmation page to user
-  res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+  // validate name and e-mail fields are not blank, send invalid input notification if required fields are blank
+  if(req.body.lname === "" || req.body.fname === "" || req.body.email == "")
+  {
+    res.send("Invalid Input");
+  }
+  
+  // if field validation passses create contact object, add contact object to contactList array and send confirmation page
+  else
+  {
+    // Get form data from request body
+    const contact = 
+    {
+      lname: req.body.lname,
+      fname: req.body.fname,
+      title: req.body.title,
+      company: req.body.company,
+      linkedIn: req.body.linkedIn,
+      email: req.body.email,
+      meet: req.body.meet,
+      other: req.body.other,
+      message: req.body.message,
+      mailList: req.body.mailList,
+      format: req.body.format,
+      timestamp: new Date()
+    };
+  
+    // Save contact info to the contactList array
+    contactList.push(contact)
+    
+    // Log the contactList array to the console
+    console.log(req.body);
+  
+    // send confirmation page to user
+    res.sendFile(`${import.meta.dirname}/views/confirm.html`);
+  }
 });
 
 
