@@ -78,9 +78,7 @@ app.post('/confirm', (req, res) =>
 
 // admin route to view all contacts
 app.get('/admin', (req, res) => {
-  
-  
-  res.render('admin');
+  res.render('admin', { contactList });
 });
 
 
