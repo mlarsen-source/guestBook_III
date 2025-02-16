@@ -77,17 +77,10 @@ app.post('/confirm', (req, res) =>
 
 
 // admin route to view all contacts
-app.get('/admin/contacts', (req, res) => {
+app.get('/admin', (req, res) => {
   
-  // create dynamic admin page
-  let html = '<h1>Contact List</h1><ul>';
-  for (const contacts of contactList) 
-  {
-    html += `<li>${contacts.lname} ${contacts.fname} - ${contacts.title} - ${contacts.company} - ${contacts.linkedIn} - ${contacts.meet} -
-    ${contacts.other} - ${contacts.message} - ${contacts.mailList} - ${contacts.format} - ${contacts.timestamp}</li>`;
-  }
-  html += '</ul>';
-  res.send(html);
+  
+  res.render('admin');
 });
 
 

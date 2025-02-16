@@ -1,38 +1,22 @@
 /*
 
 Author: Matthew Larsen
-Date: 01/25/2025
-Portfolio Project: Guestbook Form
+Date: 02/13/2025
+Portfolio Project: Guestbook Part III
 Filename: home.css
 File Description: CSS code for Home page
 
 */
 
 
-body
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  background-color:#f4f4f4;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: smaller;
-  font-weight: bold;
-}
-
 form
 {
+  height:26rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #ffffff;
-  height:26rem;
-  width: 38rem;
-  box-shadow: 1px 1px 2px 2px #d3d3d3;
-  border-radius: .2rem;
-  padding: 1rem;
-  margin: 2rem;
-  accent-color: gray;
+  padding-top: 1.5rem;
+  font-weight: bold;
 }
 
 h1
