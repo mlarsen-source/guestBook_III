@@ -23,7 +23,6 @@ h2
   margin-bottom: 1rem;
 }
 
-
 #guests 
 {
   display: flex;
@@ -31,7 +30,6 @@ h2
   align-items: center;
   width: 100%;
 }
-
 
 table 
 {
